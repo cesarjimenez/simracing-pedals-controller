@@ -46,14 +46,14 @@ void loop() {
   brake = readValueFromAds(BRAKE_INPUT, 2, 6000);
   joystick.setYAxis(brake);
 
-  throttle = readValueFromAds(THROTTLE_INPUT, 2, 3500);
-  if (throttle > 20000) {
-    throttle =  20000;
+  throttle = readValueFromAds(THROTTLE_INPUT, 2, 1000);
+  if (throttle > 22500) {
+    throttle =  22500;
   }
   joystick.setXAxis(throttle);
 
-  clutch = readValueFromAds(CLUTCH_INPUT, 2, 4000);
-  if (clutch > 6000) {
+  clutch = readValueFromAds(CLUTCH_INPUT, 2, 5500);
+  if (clutch > 3000) {
     clutch =  6000;
   }
   joystick.setZAxis(clutch);
